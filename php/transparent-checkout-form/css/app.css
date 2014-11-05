@@ -1,0 +1,69 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 700px;
+}
+
+#secure-payment {
+  padding-bottom: 20px;
+}
+
+#secure-payment header {
+  padding: 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+#secure-payment header h1 {
+  margin: 0;
+}
+#secure-payment header .total-amount {
+  font-size: 1.7em;
+  color: #666;
+  margin: 20px 0 0 0;
+}
+#secure-payment header .total-amount .money {
+  font-weight: bold;
+  color: #333;
+}
+
+#secure-payment .payment-data input[type=radio] {
+  margin-top: 20px;
+}
+
+#secure-payment .payment-data .radio {
+  padding-left: 0;
+}
+
+#secure-payment .payment-data .payment-method-details {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 0 20px 20px;
+  display: none;
+}
+
+#secure-payment #error-message {
+  display: none;
+}
+
+#secure-payment #submit {
+  margin: 20px 0 0 0;
+  cursor: pointer;
+}
+#secure-payment #loader {
+  margin: 20px 0 0 10px;
+  display: none;
+}
+
+#boleto-url-link {
+  display: none;
+}
+#boleto-url-link.boleto-show {
+  display: inline-block;
+}
+
+#success-modal .modal-sm {
+  width: 400px;
+}

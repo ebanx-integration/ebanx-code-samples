@@ -1,0 +1,65 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "11846fa0bfceb6e090509d0e0ea3cd2f",
+    "packages": [
+        {
+            "name": "ebanx/ebanx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ebanx/ebanx-php.git",
+                "reference": "1b92f418b1a8455bc0b9cfcbc7a03f172dee81c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ebanx/ebanx-php/zipball/1b92f418b1a8455bc0b9cfcbc7a03f172dee81c6",
+                "reference": "1b92f418b1a8455bc0b9cfcbc7a03f172dee81c6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ebanx": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Gustavo Henrique Mascarenhas Machado",
+                    "email": "guhemama@gmail.com"
+                }
+            ],
+            "description": "EBANX PHP library",
+            "homepage": "https://ebanx.com",
+            "keywords": [
+                "api",
+                "ebanx",
+                "payment processing"
+            ],
+            "time": "2014-09-16 11:39:39"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "ebanx/ebanx": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}

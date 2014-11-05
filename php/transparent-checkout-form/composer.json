@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ebanx/ebanx": "dev-master"
+    }
+}
