@@ -6,7 +6,7 @@ $paymentData = array(
     'mode'      => 'full'
   , 'operation' => 'request'
   , 'payment'   => array(
-        'merchant_payment_code' => time()
+        'merchant_payment_code' =>  isset($_POST['merchant_payment_code']) ? $_POST['merchant_payment_code'] : ''
       , 'amount_total'      => isset($_POST['amount']) ? $_POST['amount'] : ''
       , 'currency_code'     => isset($_POST['currency_code']) ? $_POST['currency_code'] : 'USD'
       , 'name'              => isset($_POST['name']) ? $_POST['name'] : ''
@@ -41,7 +41,7 @@ if (isset($_POST['payment_method']) && $_POST['payment_method'] == 'tef')
     , 'card_cvv'      => preg_replace('/\D/', '', $_POST['cc_cvv'])
     , 'card_due_date' => preg_replace('/[^\d\/]/', '', $_POST['cc_expiration'])
   );
-  $paymentData['payment']['installments'] = $_POST['cc_instalments'];
+  $paymentData['payment']['instalments']  = $_POST['cc_instalments'];
   $paymentData['payment']['amount_total'] = calculateTotalWithInterest($_POST['amount'], $_POST['cc_instalments']);
 }
 

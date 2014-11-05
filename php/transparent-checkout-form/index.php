@@ -7,9 +7,10 @@ if (!isset($_GET['amount']) || intval($_GET['amount']) <= 0)
   exit('No amount was informed.');
 }
 
-$amount       = $_GET['amount'];
-$currencyCode = isset($_GET['currencyCode']) ? strtoupper($_GET['currencyCode']) : 'USD';
-$currencySymbol = ($currencyCode == 'BRL') ? 'R$' : '$';
+$amount         = floatval($_GET['amount']);
+$currencyCode   = isset($_GET['currency']) ? strtoupper($_GET['currency']) : 'USD';
+$currencySymbol = ($currencyCode == 'BRL') ? 'R$' : ($currencyCode == 'EUR') ? '€' : '$';
+$orderId        = (isset($_GET['orderId'])) ? $_GET['orderId'] : time();
 
 ?>
 <!DOCTYPE html>
@@ -53,6 +54,7 @@ $currencySymbol = ($currencyCode == 'BRL') ? 'R$' : '$';
       <form role="form" id="ebanx-payment" method="POST">
         <input type="hidden" name="amount" value="<?= $amount ?>">
         <input type="hidden" name="currency_code" value="<?= $currencyCode ?>">
+        <input type="hidden" name="merchant_payment_code" value="<?= $orderId ?>">
 
         <div class="customer-data">
           <div class="row">
