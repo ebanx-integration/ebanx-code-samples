@@ -1,4 +1,7 @@
 <?php
+/**
+ * @deprecated This code sample is deprecated. See https://www.ebanx.com/business/en/developers
+ */
 
 require_once 'bootstrap.php';
 
